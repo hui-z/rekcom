@@ -1,6 +1,6 @@
-const smoker = require('./index')('http://127.0.0.1:8000');
+const rekcom = require('./index')('http://127.0.0.1:8000');
 
-smoker.get('/api/v1/internal/business_group_pos/')
+rekcom.get('/api/v1/internal/business_group_pos/')
     .reply(200, [{
         "name": "锦屋料理",
         "uid": "80613676ec8f4b4c85266e14411a4756",
@@ -11,7 +11,7 @@ smoker.get('/api/v1/internal/business_group_pos/')
         "amount": 11,
     }]);
 
-smoker.get('/api/v1/internal/sales_business_groups/')
+rekcom.get('/api/v1/internal/sales_business_groups/')
     .reply(function(uri, requestBody) {
         return [
             200,
@@ -20,12 +20,12 @@ smoker.get('/api/v1/internal/sales_business_groups/')
         ];
     });
 
-smoker.get('/api/v1/internal/query/')
+rekcom.get('/api/v1/internal/query/')
     .reply(200, {
         messag: 'without query',
     });
 
-smoker.get('/api/v1/internal/query/')
+rekcom.get('/api/v1/internal/query/')
     .reply(200, {
         message: 'query1',
     })
@@ -33,7 +33,7 @@ smoker.get('/api/v1/internal/query/')
         name: 'zaihui'
     });
 
-smoker.get('/api/v1/internal/query/')
+rekcom.get('/api/v1/internal/query/')
     .reply(200, {
         message: 'query2',
     })
@@ -42,8 +42,8 @@ smoker.get('/api/v1/internal/query/')
         age: '18'
     });
 
-smoker.get('/api/v1/internal/internal_error/')
+rekcom.get('/api/v1/internal/internal_error/')
     .reply(500, 'Internal ServerError');
 
 
-smoker.start(8001);
+rekcom.start(8001);

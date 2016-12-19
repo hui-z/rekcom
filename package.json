@@ -12,11 +12,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/zaihui/smoker.git"
+    "url": "git@github.com/JingkaiZhao/rekcom.git"
   },
   "keywords": [
     "mock"
