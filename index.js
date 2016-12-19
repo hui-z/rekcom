@@ -4,7 +4,7 @@ const bodyParser = require('koa-bodyparser');
 const respond = require('./lib/respond');
 const Interceptor = require('./lib/interceptor');
 
-function smoker(origin) {
+function rekcom(origin) {
     const _router = require('koa-router')();
     const _app = koa();
     const _intercepters = [];
@@ -47,4 +47,4 @@ function smoker(origin) {
     };
 }
 
-module.exports = smoker;
+module.exports = rekcom;
