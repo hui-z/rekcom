@@ -15,10 +15,22 @@ npm install rekcom
 Pass in the hostname you want to intercept in rekcom:
 
 ```javascript
-const rekcom = require('rekcom')('http://127.0.0.1:8000')
+const rekcom = require('rekcom')('http://127.0.0.1:8000');
+```
+
+## Start mock server
+
+Sepecify the port your rekcom would be listening:
+
+```javascript
+const rekcom = require('rekcom')('http://127.0.0.1:8000');
+rekcom.start(3000);
 ```
 
 ## Specifying patch
+
+Rekcom will intercept paths you specified and reply with your response.
+For paths that not specified, reckom will forward it to origin hostname directly.
 
 The request path is expected to be a string:
 
