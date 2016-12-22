@@ -1,6 +1,6 @@
 {
   "name": "rekcom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "just a mock server",
   "main": "index.js",
   "dependencies": {
