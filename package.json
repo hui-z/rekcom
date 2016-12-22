@@ -2,7 +2,7 @@
   "name": "rekcom",
   "version": "0.0.3",
   "description": "just a mock server",
-  "main": "index.js",
+  "main": "./index.js",
   "dependencies": {
     "koa": "^1.2.4",
     "koa-bodyparser": "^2.3.0",
